@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Arithmetic Operators</title> 
+</head>
+<div class="container" style="font-size:2em;">        
+<body>       
+    <h1 style="font-family:Garamond;color:white;"><span style="background-color:tomato;">JavaScript Arithmetic Operators</span></h1>
+
+
+    <h2>Kilometer to Meter Converter</h2>
+    <label for="km">Enter kilometers:</label>
+    <input type="number" id="km">
+    <button onclick="convertToM()">Convert to meters</button>
+
+    <h2>Meter to Kilometer Converter</h2>
+    <label for="m">Enter meters:</label>
+    <input type="number" id="m">
+    <button onclick="convertToKm()">Convert to kilometers</button>
+
+    <p id="result"></p>
+
+    <script>
+        function convertToM() {
+            let km = document.getElementById("km").value;
+            let m = km * 1000;
+            document.getElementById("result").innerHTML = km + " km = " + m + " m";
+        }
+
+        function convertToKm() {
+            let m = document.getElementById("m").value;
+            let km = m / 1000;
+            document.getElementById("result").innerHTML = m + " m = " + km + " km";
+        }
+    </script>
+</body>
+</html>
