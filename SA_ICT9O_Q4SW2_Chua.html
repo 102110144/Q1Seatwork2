@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Q4 Seatwork 2</title>
+
+</head>
+<body bgcolor="#B0B0B0"></body>
+
+
+
+<center>
+
+<h1 style="color: orange;">Temperature conversion</h1>
+
+<td><img src="https://th.bing.com/th/id/R.3cfd7f59fd6164bd9f3a6859c071d545?rik=q9ACUae89lNL5w&riu=http%3a%2f%2fimages.clipartpanda.com%2fthermometer-clip-art-9cRagogce.png&ehk=IUxBj1w4iRxxYJtM3yURnE2chsg%2fDq3ZfjQPz42egk0%3d&risl=&pid=ImgRaw&r=0" width="2%" height="2%"></td>
+
+<h2>Date and Time</h2>
+    <p id="today"></p>
+    <script>
+        const date = new Date()
+        document.getElementById("today").innerHTML = date;
+    </script>
+
+<h2>Farenheit to Celsius Converter</h2>
+    <label for="F">Enter Farenheit:</label>
+    <input type="number" id="F">
+    <button onclick="convertToC()">Convert to Celsius</button>
+
+    <h2>Celsius to Farenheit Converter</h2>
+    <label for="C">Enter Celsius:</label>
+    <input type="number" id="C">
+    <button onclick="convertToF()">Convert to Farenheit</button>
+
+    <p id="result"></p>
+</center>
+    <script>
+        function convertToC() {
+            let F = document.getElementById("F").value;
+            let C = (F-32)* 5/9;
+            document.getElementById("result").innerHTML = (F-32)* 5/9;
+        }
+
+        function convertToF() {
+            let C = document.getElementById("C").value;
+            let F = (C*9/5) +32;
+            document.getElementById("result").innerHTML = (C*9/5) +32;
+        }
+
+</script>
+            
+            <table border="0" bgcolor="#88CBFF">
+        <tr width = "5%">
+            <th width = "1%">Celsius</th>
+            <th width = "1%">Fahrenheit</th>
+            <th width = "1%">Description</th>
+         
+</tr></table></html><hr>
+
+<table width="1888" bgcolor="#88FFB5">
+    <tr>
+        <th width="100">-273.15</th>
+        <th width="100">-459.67</th>
+        <th width="100">Absolute Zero Temp.</th>
+    </tr>
+
+    <tr>
+        <th width="100">0</th>
+        <th width="100">32.0</th>
+        <th width="100">Freezing/Melting point</th>
+    </tr>
+
+<tr>
+        <th width="100">21</th>
+        <th width="100">69.8</th>
+        <th width="100">room temp</th>
+    </tr>
+
+
+
+</body>
+</html>
