@@ -1,0 +1,74 @@
+<DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Length Conversion Calculator</title> 
+</head>
+<div class="container" style="font-size:2em;">        
+<body>       
+    <h1 style="font-family:Garamond;color:white;"><span style="background-color:tomato;">Length Conversion Calculator</span></h1>
+  <title>Length Conversion Calculator</title>
+  <script type="text/javascript">
+    function convertLength(){
+      // get input values
+      var inputLength = document.getElementById("length").value;
+      var inputUnit = document.getElementById("unit").value;
+
+      // convert to millimeters
+      if (inputUnit === "mm") {
+        var millimeters = inputLength;
+      } else if (inputUnit === "cm") {
+        var millimeters = inputLength * 10;
+      } else if (inputUnit === "m") {
+        var millimeters = inputLength * 1000;
+      } else if (inputUnit === "km") {
+        var millimeters = inputLength * 1000000;
+      }
+
+      // convert from millimeters to desired unit
+      var outputUnit = document.getElementById("outputUnit").value;
+
+      if (outputUnit === "mm") {
+        var outputLength = millimeters;
+      } else if (outputUnit === "cm") {
+        var outputLength = millimeters / 10;
+      } else if (outputUnit === "m") {
+        var outputLength = millimeters / 1000;
+      } else if (outputUnit === "km") {
+        var outputLength = millimeters / 1000000;
+      }
+
+      // display output
+      document.getElementById("output").innerHTML = inputLength + " " + inputUnit + " equals " + outputLength + " " + outputUnit + ".";
+    }
+  </script>
+</head>
+<body>
+  <h1>Length Conversion Calculator</h1>
+  <p>
+    <label for="length">Length:</label>
+    <input id="length" type="number" step="0.01">
+  </p>
+  <p>
+    <label for="unit">Unit:</label>
+    <select id="unit">
+      <option value="mm">mm</option>
+      <option value="cm">cm</option>
+      <option value="m">m</option>
+      <option value="km">km</option>
+    </select>
+  </p>
+  <p>
+    <label for="outputUnit">Convert to:</label>
+    <select id="outputUnit">
+      <option value="mm">mm</option>
+      <option value="cm">cm</option>
+      <option value="m">m</option>
+      <option value="km">km</option>
+    </select>
+  </p>
+  <button onclick="convertLength()">Convert</button>
+  <p id="output"></p>
+</body>
+</html>
